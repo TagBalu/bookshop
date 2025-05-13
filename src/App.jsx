@@ -8,8 +8,8 @@ import Myalert from "./components/Myalert.jsx";
 function App() {
   return (
     <>
-      <Myalert />
       <NavBar />
+      <Myalert />
       <Container>
         <AllTheBooks />
       </Container>

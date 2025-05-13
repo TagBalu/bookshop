@@ -1,15 +1,24 @@
 import { useState } from "react";
 import Alert from "react-bootstrap/Alert";
-import { Button } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 
-function Myalert() {
+function AlertDismissible() {
   const [show, setShow] = useState(true);
+
   return (
     <>
-      <Alert variant="dark">Benvenuti nella libreria Minimal</Alert>
+      <Alert show={show} variant="dark">
+        <div className="d-flex justify-content-between align-items-center">
+          <p>Benvenuti nella mia povera libreria . Qui troverete i miei libri preferiti.</p>
+          <Button onClick={() => setShow(false)} variant="outline-danger">
+            Close me
+          </Button>
+        </div>
+      </Alert>
+
       {!show && <Button onClick={() => setShow(true)}>Show Alert</Button>}
     </>
   );
 }
 
-export default Myalert;
+export default AlertDismissible;

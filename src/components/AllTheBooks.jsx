@@ -27,6 +27,7 @@ const AllTheBooks = () => {
                   <Card.Img variant="top" src={book.img} alt={book.title || "Book cover"} />
                   <Card.Body>
                     <Card.Title>{book.title || "Untitled"}</Card.Title>
+                    <p className="text-muted">{book.price ? `$${book.price}` : "Price not available"}</p>
                   </Card.Body>
                 </Card>
               </Col>
